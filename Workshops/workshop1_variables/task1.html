@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Workshop 1: Variabler</title>
+    <link href="task1.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <div id="gamearea">
+        <section id="hud-top">
+            <div id="lives"><img src="img/potions.png" /> <span id="lives-count">0</span></div>
+            <div id="coins"><img src="img/coins.png" /> <span id="coins-count">0</span></div>
+            <div id="player">
+                <img src="img/person.png" />
+                <span id="playername">Marius</span>
+            </div>
+            <div id="points"><img src="img/points.png" /> <span id="points-count">0</span></div>
+        </section>
+        <aside id="hud-inventory">
+            <h3>Armory</h3>
+            <table id="showhide">
+                <tr>
+                    <td><img src="img/longsword.png"></td>
+                    <td>Level: <span id="weapon-longsword"></span></td>
+                </tr>
+                <tr>
+                    <td><img src="img/warhammer.png"></td>
+                    <td>Level: <span id="weapon-warhammer"></span></td>
+                </tr>
+                <tr>
+                    <td><img src="img/battleaxe.png"></td>
+                    <td>Level: <span id="weapon-battleaxe"></span></td>
+                </tr>
+                <tr>
+                    <td><img src="img/armour.png"></td>
+                    <td>Level: <span id="weapon-armour"></span></td>
+                </tr>
+            </table>
+        </aside>
+    </div>
+    <script>
+        // Task 1: Player name 
+        const playerName = "Hiof"
+        document.getElementById("playername").innerHTML = playerName
+
+        // Task 2: Gathering coins
+        let coins = 15 
+        document.getElementById("coins-collected").innerHTML = coins
+
+        // Task 3: Lifes
+        let lives = 5
+        document.getElementById("lives-count") = lives
+
+        // Task 4: Weapon levels
+        let longsword = 3
+        let warhammer = 2
+        let battleaxe = 5
+        let armour = 5
+        document.getElementById("weapon-longsword") = longsword
+        document.getElementById("weapon-warhammer") = warhammer
+        document.getElementById("weapon-battleaxe") = battleaxe
+        document.getElementById("weapon-armour") = armour
+
+        // Task 5: Point calculation
+        let points = (coins * 5) + (longsword * 5) + (warhammer * 15) + (battleaxe * 20) + (armour * 25)
+        document.getElementById("points-aquired").innerHTML = points
+
+        // Task 6: Level 
+        let level = 5
+        document.getElementById("level-count").innerHTML = level
+
+    </script>
+</body>
+</html>
