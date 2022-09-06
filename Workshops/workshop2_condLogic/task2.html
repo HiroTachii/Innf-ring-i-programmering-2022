@@ -48,16 +48,16 @@
         const playerName = "Hiof"
         document.getElementById("playername").innerHTML = playerName
         //Oppgave 2: Penger
-        let coins = 15
+        let coins = 0
         document.getElementById("coins-count").innerHTML = coins
         //Oppgave 3: Liv
-        let lives = 5
+        let lives = 1
         document.getElementById("lives-count").innerHTML = lives
         //Oppgave 4: Våpen-nivåer:
         let longsword = 1
         let warhammer = 4
-        let battleaxe = 2
-        let armour = 3
+        let battleaxe = 12
+        let armour = 10
         document.getElementById("weapon-longsword").innerHTML = longsword
         document.getElementById("weapon-warhammer").innerHTML = warhammer
         document.getElementById("weapon-battleaxe").innerHTML = battleaxe
@@ -69,16 +69,58 @@
         let level = 1
         document.getElementById("level-count").innerHTML = level
 
-        const coins0 = document.getElementById(coins0)
-
+        // Task 1 (Workshop 2): Make a conditional statement to determine if the player needs to collect coins or if they already have some
         if(coins == 0) {
-            // Fortell spilleren at de må prøve å skaffe noen coins
-            coins0.innerHTML = "Collect some coins"
+            // Tell the player to go collect some coins
+            document.getElementById("coins-count").innerHTML = "Collect some coins"
         } else {
-            // Vis antall coins spilleren har
-            coins0.innerHTML = coins
+            // Show the current amount of coins collected
+            document.getElementById("coins-count").innerHTML = coins
         }
 
+        // Task 2 (Workshop 2): Check if the player has a high weapon level
+       if(battleaxe >= 10) {
+        // Display the level with gold text to indicate a high weapon level achieved
+        document.getElementById("weapon-battleaxe").style.color = "gold"
+       } else {
+        // Display the current level normally 
+        document.getElementById("weapon-battleaxe").innerHTML = battleaxe
+       }
+
+       if(armour >= 10) {
+        // Display the level with gold text to indicate a high weapon level achieved
+        document.getElementById("weapon-armour").style.color = "gold"
+       } else {
+        // Display the current level normally 
+        document.getElementById("weapon-armour").innerHTML = armour
+       }
+
+       if(warhammer >= 10) {
+        // Display the level with gold text to indicate a high weapon level achieved
+        document.getElementById("weapon-warhammer").style.color = "gold"
+       } else {
+        // Display the current level normally 
+        document.getElementById("weapon-warhammer").innerHTML = warhammer
+       }
+
+       if(longsword >= 10) {
+        // Display the level with gold text to indicate a high weapon level achieved
+        document.getElementById("weapon-longsword").style.color = "gold"
+       } else {
+        // Display the current level normally 
+        document.getElementById("weapon-longsword").innerHTML = longsword
+       }
+
+       // Task 3 (Workshop 2): Checking if the player has 1 hp left
+       if(lives == 1) {
+        // Display the players hp with a red text colour
+        document.getElementById("lives-count").style.color = "red"
+       } else {
+        // Display hp normally
+        document.getElementById("lives-count").innerHTML = lives
+       }
+
+       // Task 4 (Workshop 2): 
     </script>
 </body>
 </html>
