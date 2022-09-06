@@ -42,37 +42,32 @@
             </table>
         </aside>
     </div>
+    
     <script>
         // Task 1: Player name 
         const playerName = "Hiof"
         document.getElementById("playername").innerHTML = playerName
-
         // Task 2: Gathering coins
         let coins = 15 
-        document.getElementById("coins-collected").innerHTML = coins
-
+        document.getElementById("coins-count").innerHTML = coins
         // Task 3: Lifes
         let lives = 5
-        document.getElementById("lives-count") = lives
-
+        document.getElementById("lives-count").innerHTML = lives
         // Task 4: Weapon levels
         let longsword = 3
         let warhammer = 2
         let battleaxe = 5
         let armour = 5
-        document.getElementById("weapon-longsword") = longsword
-        document.getElementById("weapon-warhammer") = warhammer
-        document.getElementById("weapon-battleaxe") = battleaxe
-        document.getElementById("weapon-armour") = armour
-
+        document.getElementById("weapon-longsword").innerHTML = longsword
+        document.getElementById("weapon-warhammer").innerHTML = warhammer
+        document.getElementById("weapon-battleaxe").innerHTML = battleaxe
+        document.getElementById("weapon-armour").innerHTML = armour
         // Task 5: Point calculation
         let points = (coins * 5) + (longsword * 5) + (warhammer * 15) + (battleaxe * 20) + (armour * 25)
-        document.getElementById("points-aquired").innerHTML = points
-
+        document.getElementById("points-count").innerHTML = points
         // Task 6: Level 
         let level = 5
         document.getElementById("level-count").innerHTML = level
-
     </script>
 </body>
 </html>
